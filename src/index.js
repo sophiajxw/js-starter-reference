@@ -19,13 +19,6 @@ class App extends Component {
 
     this.search('pixar');
     this.search = debounce(this.search, 300);
-
-    // youtubeSearch('pixar').then(videos => {
-    //   this.setState({
-    //     videos,
-    //     selectedVideo: videos[0],
-    //   });
-    // });
   }
 
   search(text) {
@@ -39,10 +32,14 @@ class App extends Component {
 
   render() {
     return (
-      <div id="video-section">
-      <SearchBar onSearchChange={text => this.search(text)} />
-        <VideoDetail video={this.state.selectedVideo} />
-        <VideoList onVideoSelect={selectedVideo => this.setState({ selectedVideo })} videos={this.state.videos} />
+      <div>
+        <nav>
+          <SearchBar onSearchChange={text => this.search(text)} />
+        </nav>
+        <div id="video-section">
+          <VideoDetail video={this.state.selectedVideo} />
+          <VideoList onVideoSelect={selectedVideo => this.setState({ selectedVideo })} videos={this.state.videos} />
+        </div>
       </div>
     );
   }

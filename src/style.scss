@@ -7,15 +7,28 @@ body {
   color: $fontcolor;
   background-color: $backgroundcolor;
   margin: 50px;
+
 }
 
+nav {
+  display: flex;
+  margin-left: 0;
+  height: 32px;
+  width: 100vw;
+  background-color: darkred;
+}
 
 #search-bar {
+  margin-top: 10px;
+  margin-left: 10px;
   margin-bottom: 20px;
+  margin-bottom: 20px;
+  padding: 2px;
 
   input {
-    font-size: 1.5em;
+    font-size: 5em;
     border-radius: .25em;
+    background-color: white;
   }
 }
 
@@ -29,9 +42,23 @@ body {
     display: flex;
     width: 25vw;
     padding: 10px;
+    color: black;
   }
   li:hover {
     background: darken( $backgroundcolor, 10% );
+  }
+}
+
+.video-detail .details {
+  box-shadow: 5px 5px 5px #d6d6d6;
+  :first-child {
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+  :not(:first-child) {
+    color: rgb(10,150,150);
+    padding-bottom: 10px;
   }
 
 }
